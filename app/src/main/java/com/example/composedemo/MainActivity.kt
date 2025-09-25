@@ -40,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     ComposeDemoTheme {
@@ -55,4 +55,12 @@ fun DemoText (message: String, fontSize: Float){
         fontSize = fontSize.sp,
         fontWeight = FontWeight.Bold
     )
+}
+
+@Preview
+@Composable
+fun DemoTextPreview() {
+    ComposeDemoTheme {
+        DemoText(message = "Welcome to Android", fontSize = 12f)
+    }
 }
