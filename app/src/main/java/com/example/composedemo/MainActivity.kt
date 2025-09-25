@@ -33,12 +33,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeDemoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                Scaffold(
+                    content = { innerPadding ->
+                        DemoScreen(modifier = Modifier.padding(innerPadding))
+                    }
+                )
             }
         }
     }
